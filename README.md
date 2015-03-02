@@ -13,7 +13,8 @@ Modify http request/response in javascript config file easily.
 
 
 ![](https://i.alipayobjects.com/i/ecmng/png/201502/4LzAfblxIr.png)
-
+![](https://i.alipayobjects.com/i/ecmng/png/201503/4VlkyBwwqb.png)
+![](https://i.alipayobjects.com/i/ecmng/png/201503/4Vlo4OV1oD.png)
 
 Install
 --------------
