@@ -1,0 +1,162 @@
+
+.console {
+    position: relative;
+    width: 100%;
+    /* border: 1px dashed red; */
+    /* height: 200px; */
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+}
+
+.menu {
+    background: #eee;
+    padding: 0px 0 0px 55px;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+}
+
+.menu ul {
+
+}
+
+.menu ul:after,
+.filter ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.menu li {
+    float: left;
+    padding: 5px 10px;
+    border-right: 1px solid #bbb;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background: #ddd;
+    color: #fff;
+}
+
+.menu-selected {
+    background: #bbb;
+    color: #fff;
+
+}
+
+.submenu {
+
+}
+
+.filter {
+    padding: 4px 0;
+    padding-left: 50px;
+    margin-top: 0;
+}
+
+.filter ul {
+
+}
+
+.filter li {
+    float: left;
+    padding: 5px 5px;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.filter li:hover {
+    background: #ddd;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.filter-selected {
+    background: #bbb;
+
+    border-radius: 2px;
+    color: #fff;
+}
+
+.body {
+    margin-top: 60px;
+    height: 500px;;
+    overflow-y: scroll;
+}
+
+.body table {
+    width: 100%;
+    /* height: 200px; */
+}
+.body table thead{
+
+}
+.body table tr {
+    background: #fff;
+}
+.body table thead tr {
+}
+.body table tr.tr-even{
+    background: #eee;
+}
+.body table th {
+    border: 1px solid #ccc;
+
+    padding: 5px;
+}
+
+.body table td {
+    border: 1px solid #ccc;
+    text-align: left;
+    /* background: #eee; */
+    padding: 4px 2px;
+}
+
+.t-name {
+    width: 580px;
+    max-width: 580px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+.body table td.t-method {
+    width: 60px;
+    max-width: 60px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.body table td.t-status {
+    width: 50px;
+    width: 50px;
+    width: 50px;
+    text-align: center;
+}
+
+.t-type {
+    width: 230px;
+
+}
+
+.t-size {
+    width: 120px;
+
+}
+.t-time {
+
+}
+
+.time-block{
+    float:left;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: RGBA(14, 127, 17, 0.5);
+    margin-right: 5px;
+}

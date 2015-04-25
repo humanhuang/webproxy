@@ -1,0 +1,31 @@
+{
+  "name": "webproxy",
+  "version": "0.0.32",
+  "description": "Modify http request/response in javascript config file easily.",
+  "main": "bin.js",
+  "bin": {
+    "webproxy": "bin.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "halfthink@163.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/humanhuang/webproxy"
+  },
+  "keywords": [
+    "proxy",
+    "webproxy"
+  ],
+  "homepage": "https://github.com/humanhuang/webproxy",
+  "dependencies": {
+    "colorful": "^2.1.0",
+    "commander": "^2.6.0",
+    "date-utils": "^1.2.16",
+    "express": "^4.11.2",
+    "url": "^0.10.2",
+    "ws": "^0.7.1"
+  }
+}

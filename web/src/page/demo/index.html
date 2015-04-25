@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>webproxy</title>
+    <link href="../common/base.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <script type="text/javascript" src="../../common/package.js"></script>
+    <script>
+        require(['common/lib/jquery'], function ($) {
+            $(function () {
+                require(['page/demo/main'], function (Main) {
+                    Main.init();
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<section class="header">
+    <section class="menu">
+        <ul>
+            <li class="menu-selected">Network</li>
+            <li id="clear">clear</li>
+        </ul>
+    </section>
+
+    <section class="submenu">
+    </section>
+
+    <section class="filter">
+        <ul>
+            <li class="filter-selected" data-type="">All</li>
+            <li data-type="html">Documents</li>
+            <li data-type="javascript">Javascript</li>
+            <li data-type="css">CSS</li>
+            <li data-type="image">Image</li>
+        </ul>
+    </section>
+
+</section>
+
+<section class="console">
+
+    <section class="body">
+
+        <table>
+            <thead>
+            <tr>
+                <th class="t-name">Name</th>
+                <th class="t-method">Method</th>
+                <th class="t-status">Status</th>
+                <th class="t-type">Type</th>
+                <th class="t-size">Size</th>
+                <th class="t-time">Time</th>
+            </tr>
+            </thead>
+
+            <tbody id="j-table-body">
+            <!--<tr class="tr-even">-->
+                <!--<td class="t-name"-->
+                    <!--title="aaa">-->
+<!--aaa-->
+                <!--</td>-->
+                <!--<td title="GET">GET</td>-->
+                <!--<td title="200">200</td>-->
+                <!--<td title="image/gif">image/gif</td>-->
+                <!--<td title="43">43</td>-->
+                <!--<td title="510">-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td>1</td>-->
+            <!--<td>2</td>-->
+            <!--<td>3</td>-->
+            <!--<td>4</td>-->
+            <!--<td>5</td>-->
+            <!--<td>6</td>-->
+            <!--</tr>-->
+            </tbody>
+
+        </table>
+
+    </section>
+</section>
+
+<script type="text/html" id="t-table-row">
+
+    <tr class="<%=className%>">
+        <td class="t-name" title="<%=location%>"><%=location%></td>
+        <td class="t-method" title="<%=method%>"><%=method%></td>
+        <td class="t-status" title="<%=status%>"><%=status%></td>
+        <td class="t-type" title="<%=type%>"><%=type%></td>
+        <td class="t-size"><%=size%></td>
+        <td><%=time%></td>
+    </tr>
+
+</script>
+
+</body>
+</html>

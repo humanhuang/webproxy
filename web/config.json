@@ -1,0 +1,99 @@
+{
+      "name": "kindUI",
+      "dist_path":"dist",
+      "static_build_path": [
+            {
+                  "src": "src/page",
+                  "dist": "dist/page"
+            },
+            {
+                  "src": "src/common",
+                  "dist": "dist/common"
+            },
+            {
+                  "src": "src/image",
+                  "dist": "dist/image"
+            }
+
+      ],
+      "all_pack_path": "dist/common",
+      "all_pack_name": "package.js",
+      "modules": [
+            {
+                  "src_path": "src/common/config",
+                  "dist_path": "src/common",
+                  "dist_name": "package.js",
+                  "pack_to_libs": true,
+                  "is_dev":true,
+                  "pack_list": [
+                        "require.js",
+                        "isDist.js",
+                        "require-config.js"
+                  ]
+
+            },
+            {
+                  "src_path": "src/common/config",
+                  "dist_path": "dist/common/config",
+                  "dist_name": "configs.js",
+                  "pack_to_libs": true,
+                  "pack_list": [
+                        "require.js",
+                        "isDist.js",
+                        "require-config.js",
+                        "cgi.js",
+                        "errorcode.js"
+                  ]
+
+            },
+            {
+                  "src_path": "src/common/lib",
+                  "dist_path": "dist/common/lib",
+                  "dist_name": "libs.js",
+                  "pack_to_libs": true,
+                  "pack_list": [
+                        "jquery.js",
+                        "fastclick.js",
+                        "moment.js",
+                        "numeral.js"
+                  ]
+
+            },
+            {
+                  "src_path": "src/common/util",
+                  "dist_path": "dist/common/util",
+                  "dist_name": "utils.js",
+                  "pack_to_libs": true,
+                  "pack_list": [
+                        "template.js",
+                        "utilA.js",
+                        "utilB.js"
+                  ]
+
+            },
+            {
+                  "src_path": "src/common/widget",
+                  "dist_path": "dist/common/widget",
+                  "dist_name": "widgets.js",
+                  "pack_to_libs": true,
+                  "pack_list": [
+                        "widgetA.js",
+                        "widgetB.js"
+                  ]
+
+            },
+            {
+                  "src_path": "src/page/index",
+                  "dist_path": "dist/page/index",
+                  "dist_name": "main.js",
+                  "pack_list": [
+                        "top.js",
+                        "content.js",
+                        "bottom.js",
+                        "main.js"
+                  ]
+
+            }
+      ]
+
+}
