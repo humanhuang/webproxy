@@ -1,5 +1,5 @@
 {
-  "name": "webproxy",
+  "name":  "webproxy",
   "version": "0.0.32",
   "description": "Modify http request/response in javascript config file easily.",
   "main": "bin.js",
