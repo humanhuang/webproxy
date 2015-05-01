@@ -1,22 +1,22 @@
 var http = require('http'),
-      https = require('https'),
-      exec = require('child_process').exec,
-      Url = require('url'),
-      color = require('colorful'),
-      fs = require('fs'),
-      date = require('date-utils');
+    https = require('https'),
+    exec = require('child_process').exec,
+    Url = require('url'),
+    color = require('colorful'),
+    fs = require('fs'),
+    date = require('date-utils');
 
 var log = require('./lib/log.js'),
-      handler = require('./lib/handler'),
-      g = require('./conf/g'),
-      util = require('./lib/util.js'),
-      web = require('./web.js');
+    handler = require('./lib/handler'),
+    g = require('./conf/g'),
+    util = require('./lib/util.js'),
+    web = require('./web.js');
 
 
 
 var defaultPort = 9000,
-      staticPort = 9001,
-      websocketPort = 9002;
+    staticPort = 9001,
+    websocketPort = 9002;
 
 exports.start = start;
 function start(port, ruleModule) {
@@ -34,7 +34,14 @@ function start(port, ruleModule) {
             }
       });
 
-      http.createServer(function (requestClient, responseClient) {
+      var options = {
+            key: fs.readFileSync('key.pem'),
+            cert: fs.readFileSync('cert.pem')
+      };
+
+      https.createServer(options, function (requestClient, responseClient) {
+
+      //http.createServer(function (requestClient, responseClient) {
 
             delete requestClient.headers['accept-encoding'];
             delete requestClient.headers['if-modified-since'];
@@ -98,12 +105,13 @@ function start(port, ruleModule) {
                               //var str = iconv.decode(chunk, 'GBK');
 
                               resData.push(chunk);
+                              console.log('ondataa')
                         });
 
                         response.on('end', function () {
 
                               var statusCode = this.statusCode,
-                                    headers = this.headers;
+                                  headers = this.headers;
 
                               var responseBuffer = Buffer.concat(resData);
 
