@@ -45,10 +45,11 @@ $ webproxy --port 9000 start
 
 ### 3、Use rule config file
 ```
-$ webproxy --rule config.js start
+$ webproxy start --rule rule.js
 ```
 
-### config.js
+### rule.js
+use this rule.js to wrap define header in every javascript file.
 ```javascript
 exports.request = function (req) {
       //req.hostname
