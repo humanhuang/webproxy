@@ -2,9 +2,9 @@
 var program = require('commander'),
       color = require('colorful'),
       fs = require('fs'),
-      rule = require('./rule.js'),
+      rule = require('./rules/rule.js'),
       package = require('./package.json'),
-      proxy = require('./proxy');
+      proxy = require('./lib/proxy');
 
 program
       .version(package.version)
@@ -25,7 +25,6 @@ var firstArgs = program.args[0];
 
 var ruleFile = program.rule || null;
 var port = program.port || 9000;
-
 
 var absRulePath, ruleModule;
 if (ruleFile) {
