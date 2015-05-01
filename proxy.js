@@ -107,7 +107,6 @@ function start(port, ruleModule) {
                               //var str = iconv.decode(chunk, 'GBK');
 
                               resData.push(chunk);
-                              console.log('ondataa')
                         });
 
                         response.on('end', function () {
