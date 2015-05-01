@@ -48,6 +48,8 @@ $ webproxy --port 9000 start
 $ webproxy start --rule rule.js
 ```
 
+####  there are some sample rules at [./rules](http://git.oschina.net/human/webproxy/tree/master/rules)
+
 ### rule.js
 use this rule.js to wrap define header in every javascript file.
 ```javascript
@@ -57,7 +59,7 @@ exports.request = function (req) {
       //req.method
       //req.headers
 
-      req.headers.proxy = '***webproxy*** inject new field';
+      req.headers.proxy = '*request inject new field by webproxy*';
 
       return req;
 };
@@ -74,7 +76,7 @@ exports.response = function (req, res) {
       //res.headers
       //res.responseBuffer
 
-      res.headers.proxy = '***hacked by *** webproxy'
+      res.headers.proxy = '*wrap define header by webproxy*'
 
       if (/javascript/.test(res.headers['content-type'])) {
             res.responseBuffer = ';define(function(require, exports, module){' + res.responseBuffer + '});';
