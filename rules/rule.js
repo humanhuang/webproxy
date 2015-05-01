@@ -31,15 +31,3 @@ exports.response = function (req, res) {
 
       return res;
 };
-
-
-//var fs = require('fs');
-//res.info = 'add comment **hacked by theProxy**';
-//res.headers.proxyServer = '**hacked by theProxy**';
-//
-//if(req.location.indexOf('test.html') != -1) {
-//      var mapFile = fs.readFileSync('test.html');
-//      res.responseBuffer = mapFile;
-//      res.headers['content-length'] = mapFile.length;
-//}
-//res.headers.author = 'halfthink@163.com';
