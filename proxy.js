@@ -34,14 +34,14 @@ function start(port, ruleModule) {
             }
       });
 
-      var options = {
-            key: fs.readFileSync('key.pem'),
-            cert: fs.readFileSync('cert.pem')
-      };
+      //var options = {
+      //      key: fs.readFileSync('cakey.pem'),
+      //      cert: fs.readFileSync('cacert.pem')
+      //};
 
-      https.createServer(options, function (requestClient, responseClient) {
+      //https.createServer(options, function (requestClient, responseClient) {
 
-      //http.createServer(function (requestClient, responseClient) {
+      http.createServer(function (requestClient, responseClient) {
 
             delete requestClient.headers['accept-encoding'];
             delete requestClient.headers['if-modified-since'];
@@ -86,6 +86,8 @@ function start(port, ruleModule) {
                   var resData = [];
 
                   var req = http.request(options, responseCallback);
+
+                  //var req = https.request(options, responseCallback);
 
                   req.on("error", function (e) {
                         log.error('problem with request: \n' + JSON.stringify(e, null, '\t'));
