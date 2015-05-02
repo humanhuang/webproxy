@@ -94,12 +94,12 @@ Use webproxy as a node module
 var webproxy = require('webproxy')
 
 webproxy.start({
-            port: port,
+            port: 9000,
+            ruleModule: require("./path/ruleModule.js"),
             staticPort: 9001,
             websocketPort: 9002,
             useWebUI: true,
             useConsoleInfo: true,
-            ruleModule: require("./path/ruleModule.js"),
       });
 ```
 
