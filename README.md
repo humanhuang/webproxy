@@ -90,6 +90,7 @@ exports.response = function (req, res) {
 Use webproxy as a node module
 --------------
 
+```javascript
 var webproxy = require('webproxy')
 
 webproxy.start({
@@ -100,6 +101,7 @@ webproxy.start({
             useConsoleInfo: true,
             ruleModule: require("./path/ruleModule.js"),
       });
+```
 
 
 --------------
