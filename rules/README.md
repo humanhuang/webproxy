@@ -11,3 +11,8 @@ The following are sample rules.
 
 * rule_allow_cors.js
     * 允许ajax跨域请求
+
+
+rule可以串行的传入
+
+[rule1, rule2, rule3]

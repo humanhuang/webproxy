@@ -63,7 +63,10 @@ if (firstArgs == 'start') {
             port:port,
             //staticPort:9001,
             //websocketPort:9002,
-            useWebUI:true,
+            //useWebUI:true,
+            //useConsoleInfo:true,
+            useWebUI:false,
+            useConsoleInfo:false,
             ruleModule:ruleModule
       });
       return;
