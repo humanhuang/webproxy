@@ -14,7 +14,7 @@ Modify http request/response in javascript config file easily.
 
 ![](https://i.alipayobjects.com/i/ecmng/png/201502/4LzAfblxIr.png)
 
-### Web UI
+### Web UI, Web Page Performance Analyze.
 
 ![](https://i.alipayobjects.com/i/ecmng/png/201503/4VlkyBwwqb.png)
 
@@ -85,6 +85,22 @@ exports.response = function (req, res) {
       return res;
 };
 ```
+
+
+Use webproxy as a node module
+--------------
+
+var webproxy = require('webproxy')
+
+webproxy.start({
+            port: port,
+            staticPort: 9001,
+            websocketPort: 9002,
+            useWebUI: true,
+            useConsoleInfo: true,
+            ruleModule: require("./path/ruleModule.js"),
+      });
+
 
 --------------
 
