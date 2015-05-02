@@ -59,7 +59,13 @@ if (!ruleModule) {
 }
 
 if (firstArgs == 'start') {
-      proxy.start(port, ruleModule);
+      proxy.start({
+            port:port,
+            //staticPort:9001,
+            //websocketPort:9002,
+            useWebUI:true,
+            ruleModule:ruleModule
+      });
       return;
 }
 //magenta', 'cyan'

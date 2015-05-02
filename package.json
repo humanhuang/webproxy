@@ -2,7 +2,7 @@
   "name": "webproxy",
   "version": "0.1.2",
   "description": "Modify http request/response in javascript config file easily.",
-  "main": "bin.js",
+  "main": "proxy.js",
   "bin": {
     "webproxy": "bin.js"
   },
