@@ -49,7 +49,7 @@ $ webproxy --port 9000 start
 $ webproxy start --rule rule.js
 ```
 
-##  there are some sample rules at [./rules](http://git.oschina.net/human/webproxy/tree/master/rules)
+##  there are some sample rules at [./rules](https://github.com/kindteam/webproxy/tree/master/rules)
 
 ### rule.js
 use this rule.js to wrap define header in every javascript file.
