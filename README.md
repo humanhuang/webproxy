@@ -106,11 +106,3 @@ webproxy.start({
 
 
 --------------
-
-Author: human huang
-
-QQ    : 316996367
-
-Email : halfthink@163.com
-
-交流Q群: 415719701
